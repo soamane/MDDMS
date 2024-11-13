@@ -29,7 +29,7 @@ ShippedDrugsTab::ShippedDrugsTab(QWidget* parent)
     connect(m_deleteButton, &QPushButton::clicked, this, &ShippedDrugsTab::deleteRequest);
     connect(m_tableWidget->selectionModel(), &QItemSelectionModel::selectionChanged, this, [this]()
     {
-        updateButtonState({ m_addButton, m_updateButton, m_deleteButton });
+        updateButtonState({ m_updateButton, m_deleteButton });
     });
 }
 
@@ -64,7 +64,7 @@ void ShippedDrugsTab::create() {
     m_batchIdEdit->setPlaceholderText("Код партии");
     m_requestDateEdit->setPlaceholderText("Дата заявки");
 
-    updateButtonState({ m_addButton, m_updateButton, m_deleteButton });
+    updateButtonState({ m_updateButton, m_deleteButton });
 }
 
 void ShippedDrugsTab::addRequest() {

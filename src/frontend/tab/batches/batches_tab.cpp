@@ -29,7 +29,7 @@ BatchesTab::BatchesTab(QWidget* parent)
     connect(m_deleteButton, &QPushButton::clicked, this, &BatchesTab::deleteBatch);
     connect(m_tableWidget->selectionModel(), &QItemSelectionModel::selectionChanged, this, [this]()
     {
-        updateButtonState({ m_addButton, m_updateButton, m_deleteButton });
+        updateButtonState({ m_updateButton, m_deleteButton });
     });
 }
 

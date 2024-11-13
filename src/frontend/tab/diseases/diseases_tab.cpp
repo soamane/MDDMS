@@ -27,7 +27,7 @@ DiseasesTab::DiseasesTab(QWidget* parent)
     connect(m_deleteButton, &QPushButton::clicked, this, &DiseasesTab::deleteDisease);
     connect(m_tableWidget->selectionModel(), &QItemSelectionModel::selectionChanged, this, [this]()
     {
-        updateButtonState({ m_addButton, m_updateButton, m_deleteButton });
+        updateButtonState({ m_updateButton, m_deleteButton });
     });
 }
 
@@ -60,7 +60,7 @@ void DiseasesTab::create() {
     m_nameEdit->setPlaceholderText("Название болезни");
     m_descriptionEdit->setPlaceholderText("Описание болезни");
 
-    updateButtonState({ m_addButton, m_updateButton, m_deleteButton });
+    updateButtonState({ m_updateButton, m_deleteButton });
 }
 
 void DiseasesTab::addDisease() {

@@ -29,7 +29,7 @@ SuppliersTab::SuppliersTab(QWidget* parent)
     connect(m_deleteButton, &QPushButton::clicked, this, &SuppliersTab::deleteSupplier);
     connect(m_tableWidget->selectionModel(), &QItemSelectionModel::selectionChanged, this, [this]()
     {
-        updateButtonState({ m_addButton, m_updateButton, m_deleteButton });
+        updateButtonState({ m_updateButton, m_deleteButton });
     });
 }
 
@@ -64,7 +64,7 @@ void SuppliersTab::create() {
     m_innEdit->setPlaceholderText("ИНН");
     m_addressEdit->setPlaceholderText("Адрес");
 
-    updateButtonState({ m_addButton, m_updateButton, m_deleteButton });
+    updateButtonState({ m_updateButton, m_deleteButton });
 }
 
 void SuppliersTab::addSupplier() {

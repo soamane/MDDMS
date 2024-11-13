@@ -17,7 +17,6 @@ int main(int argc, char* argv[]) {
         database.open();
     }
 
-
     MainWindow window;
     window.show();
 

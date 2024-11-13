@@ -27,7 +27,7 @@ DrugsTab::DrugsTab(QWidget* parent)
     connect(m_deleteButton, &QPushButton::clicked, this, &DrugsTab::deleteDrug);
     connect(m_tableWidget->selectionModel(), &QItemSelectionModel::selectionChanged, this, [this]()
     {
-        updateButtonState({ m_addButton, m_updateButton, m_deleteButton });
+        updateButtonState({ m_updateButton, m_deleteButton });
     });
 }
 
@@ -60,7 +60,7 @@ void DrugsTab::create() {
     m_nameEdit->setPlaceholderText("Название препарата");
     m_descriptionEdit->setPlaceholderText("Описание препарата");
 
-    updateButtonState({ m_addButton, m_updateButton, m_deleteButton });
+    updateButtonState({ m_updateButton, m_deleteButton });
 }
 
 void DrugsTab::addDrug() {
